@@ -72,7 +72,9 @@ var app = {
             tag.canMakeReadOnly = tag.isLockable;
         }
 
-        tagContents.innerHTML = app.tagTemplate(tag);
+        $('.ma').innerText = "가격을 입력해 주세요!";
+        $('.na').css('display','block');
+        $('.sa').innerText = decodePayload(tag[0]);
 
         navigator.notification.vibrate(100);        
     },
